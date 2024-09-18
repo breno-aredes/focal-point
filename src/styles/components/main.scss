@@ -1,6 +1,58 @@
 .main-container {
   width: 100%;
-  background-color: lightcoral;
   display: flex;
   justify-content: center;
+  main {
+    min-width: 500px;
+    border: 1px solid #eaecf0;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0000008a;
+    line-height: 16px;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  li {
+    padding: 16px;
+    border: 1px dashed #d7dde9;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    &:hover {
+      border: none;
+      background-color: #f7f9fd;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  svg {
+    font-size: 24px;
+    color: #b0bbd1;
+  }
+}
+
+.completTasks {
+  p {
+    color: #0000008a;
+    text-decoration: line-through;
+  }
 }
