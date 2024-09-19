@@ -12,7 +12,7 @@ const DeleteContent = ({ setDeleteVisible }: deleteModal) => {
         <Button variant="cancel" onClick={() => setDeleteVisible(false)}>
           Cancelar
         </Button>
-        <Button variant="delete">Adicionar</Button>
+        <Button variant="delete">Deletar</Button>
       </div>
     </div>
   );
