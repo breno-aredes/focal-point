@@ -1,6 +1,7 @@
 import { LuTrash } from "react-icons/lu";
 
 import "@/styles/components/main.scss";
+import Button from "../button";
 
 export default function Main() {
   return (
@@ -27,6 +28,8 @@ export default function Main() {
           </li>
         </ul>
       </main>
+
+      <Button type="save">Adicionar nova tarefa</Button>
     </div>
   );
 }
