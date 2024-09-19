@@ -2,6 +2,7 @@ import { LuTrash } from "react-icons/lu";
 
 import "@/styles/components/main.scss";
 import Button from "../button";
+import Checkbox from "../checkbox";
 
 export default function Main() {
   return (
@@ -11,20 +12,31 @@ export default function Main() {
 
         <ul className="tasks">
           <li>
-            <p>Tasks</p>
+            <p>
+              <Checkbox /> Task
+            </p>
             <LuTrash />
           </li>
           <li>
-            <p>Tasks 1</p> <LuTrash />
+            <p>
+              <Checkbox /> Tasks 1
+            </p>
+            <LuTrash />
           </li>
           <li>
-            <p>Tasks 2</p> <LuTrash />
+            <p>
+              <Checkbox /> Tasks 2
+            </p>
+            <LuTrash />
           </li>
         </ul>
         <h1>Tarefas finalizadas</h1>
         <ul className="completTasks">
           <li>
-            <p>completTasks</p> <LuTrash />
+            <p>
+              <Checkbox /> completTasks
+            </p>
+            <LuTrash />
           </li>
         </ul>
       </main>

@@ -6,8 +6,9 @@
   align-items: center;
   main {
     min-width: 500px;
+    max-width: 500px;
     border: 1px solid #eaecf0;
-    padding: 32px 32px 16px 32px;
+    padding: 32px 32px 20px 32px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -27,9 +28,9 @@
     gap: 24px;
   }
   li {
-    padding: 16px;
+    padding: 0px 16px;
     border: 1px dashed #d7dde9;
-    height: 56px;
+    min-height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +45,10 @@
   p {
     font-size: 16px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 90%;
   }
 
   svg {
@@ -54,6 +59,9 @@
   @media (max-width: 550px) {
     main {
       min-width: 100%;
+    }
+    p {
+      width: 85%;
     }
   }
 }
