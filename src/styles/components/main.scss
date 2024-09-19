@@ -50,6 +50,12 @@
     font-size: 24px;
     color: #b0bbd1;
   }
+
+  @media (max-width: 550px) {
+    main {
+      min-width: 100%;
+    }
+  }
 }
 
 .completTasks {
