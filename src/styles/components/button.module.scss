@@ -1,0 +1,32 @@
+.button {
+  width: 100%;
+  height: 51px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 500px;
+  margin-top: 24px;
+}
+
+.deleteButton {
+  background: rgb(212, 9, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(212, 9, 9, 1) 0%,
+    rgba(240, 83, 83, 1) 100%
+  );
+  color: white;
+}
+
+.saveButton {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 151, 212, 1) 0%,
+    rgba(83, 193, 240, 1) 100%
+  );
+  color: white;
+}
+
+.cancelButton {
+  background-color: #e7eefb;
+}
