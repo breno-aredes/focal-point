@@ -1,0 +1,49 @@
+.modalBody {
+  width: 450px;
+  border-radius: 16px;
+  background-color: white;
+  box-shadow: 0px 24px 48px -12px #1018282e;
+  color: black;
+}
+
+.modalContent {
+  padding: 32px;
+  h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  label {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  input {
+    all: unset;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #d7dde9;
+    width: 386px;
+    height: 51px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  form {
+    margin-bottom: 32px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+}
+
+.modalButtonContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}

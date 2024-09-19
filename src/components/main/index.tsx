@@ -3,8 +3,9 @@ import { LuTrash } from "react-icons/lu";
 import "@/styles/components/main.scss";
 import Button from "../button";
 import Checkbox from "../checkbox";
+import { MainProps } from "@/types/components/mainTypes";
 
-export default function Main() {
+export default function Main({ setDeleteVisible, setAddVisible }: MainProps) {
   return (
     <div className="main-container">
       <main>
@@ -15,7 +16,7 @@ export default function Main() {
             <p>
               <Checkbox /> Task
             </p>
-            <LuTrash />
+            <LuTrash onClick={() => setDeleteVisible(true)} />
           </li>
           <li>
             <p>
@@ -41,7 +42,9 @@ export default function Main() {
         </ul>
       </main>
 
-      <Button type="save">Adicionar nova tarefa</Button>
+      <Button type="button" variant="save" onClick={() => setAddVisible(true)}>
+        Adicionar nova tarefa
+      </Button>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import styles from "@/styles/components/button.module.scss";
 import { ButtonProps } from "@/types/components/buttonTypes";
 
-const Button = ({ children, type, ...props }: ButtonProps) => {
+const Button = ({ children, variant, ...props }: ButtonProps) => {
   const getButtonColor = () => {
-    switch (type) {
+    switch (variant) {
       case "cancel":
         return styles.cancelButton;
       case "save":
