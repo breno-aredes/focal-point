@@ -51,7 +51,14 @@
     gap: 16px;
     width: 90%;
   }
-
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: back;
+    line-height: 16px;
+    padding: 20px 0px;
+    text-align: center;
+  }
   svg {
     font-size: 24px;
     color: #b0bbd1;
@@ -67,7 +74,7 @@
   }
 }
 
-.completTasks {
+.completedTasks {
   p {
     color: #0000008a;
     text-decoration: line-through;

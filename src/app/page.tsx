@@ -10,18 +10,40 @@ import { useState } from "react";
 export default function Home() {
   const [addVisible, setAddVisible] = useState<boolean>(false);
   const [deleteVisible, setDeleteVisible] = useState<boolean>(false);
-
+  const [toDoList, setToDoList] = useState<string[]>([]);
+  const [completedTasks, setCompletedTasks] = useState<string[]>([]);
+  const [selectedTask, setSelectedTask] = useState<string>("");
   return (
     <div className="home-container">
       <Header />
-      <Main setAddVisible={setAddVisible} setDeleteVisible={setDeleteVisible} />
+      <Main
+        setAddVisible={setAddVisible}
+        setDeleteVisible={setDeleteVisible}
+        toDoList={toDoList}
+        completedTasks={completedTasks}
+        setSelectedTask={setSelectedTask}
+        setCompletedTasks={setCompletedTasks}
+        setToDoList={setToDoList}
+      />
 
       <Modal modalVisible={addVisible}>
-        <AddContent setAddVisible={setAddVisible} />
+        <AddContent
+          setAddVisible={setAddVisible}
+          setToDoList={setToDoList}
+          toDoList={toDoList}
+        />
       </Modal>
 
       <Modal modalVisible={deleteVisible}>
-        <DeleteContent setDeleteVisible={setDeleteVisible} />
+        <DeleteContent
+          setDeleteVisible={setDeleteVisible}
+          setToDoList={setToDoList}
+          toDoList={toDoList}
+          selectedTask={selectedTask}
+          setSelectedTask={setSelectedTask}
+          setCompletedTasks={setCompletedTasks}
+          completedTasks={completedTasks}
+        />
       </Modal>
     </div>
   );
