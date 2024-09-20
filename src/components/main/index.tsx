@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { LuTrash } from "react-icons/lu";
 import "@/styles/components/main.scss";
 import Button from "../button";
