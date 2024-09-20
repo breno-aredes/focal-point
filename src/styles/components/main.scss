@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   main {
-    min-width: 500px;
-    max-width: 500px;
+    min-width: 450px;
+    max-width: 450px;
     border: 1px solid #eaecf0;
     padding: 32px 32px 20px 32px;
     border-radius: 16px;
@@ -40,6 +40,7 @@
     &:hover {
       border: none;
       background-color: #f7f9fd;
+      border: 1px solid #f7f9fd;
     }
   }
   p {
@@ -50,13 +51,20 @@
     gap: 16px;
     width: 90%;
   }
-
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: back;
+    line-height: 16px;
+    padding: 20px 0px;
+    text-align: center;
+  }
   svg {
     font-size: 24px;
     color: #b0bbd1;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 500px) {
     main {
       min-width: 100%;
     }
@@ -66,7 +74,7 @@
   }
 }
 
-.completTasks {
+.completedTasks {
   p {
     color: #0000008a;
     text-decoration: line-through;

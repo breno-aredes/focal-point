@@ -1,4 +1,5 @@
-export interface ButtonProps {
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  type: "cancel" | "save" | "delete";
+  variant: "cancel" | "save" | "delete";
 }
