@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Focal-Point - Teste Técnico Legaplan
 
-## Getting Started
+Este projeto é uma aplicação de lista de tarefas com funcionalidades para adicionar, excluir e marcar tarefas como concluídas.
 
-First, run the development server:
+## Tecnologias Utilizadas:
+
+- **Next.js**: Framework utilizado para a criação da aplicação React.
+- **React**: Biblioteca JavaScript para construção de interfaces.
+- **SCSS**: Utilizado para a estilização dos componentes.
+- **React Icons**: Biblioteca de ícones utilizada na interface.
+- **TypeScript**: Linguagem de programação usada para adicionar tipagem estática ao código.
+- **React-modal**: Biblioteca utilizada para a criação e gerenciamento de modais, permitindo uma experiência de usuário dinâmica ao exibir conteúdos como formulários e confirmações em uma janela sobreposta à interface principal.
+
+## Funcionalidades:
+
+- Adicionar novas tarefas.
+- Excluir tarefas existentes.
+- Marcar tarefas como concluídas.
+
+## Instalação e Execução
+
+Siga os passos abaixo para rodar o projeto localmente.
+
+### Pré-requisitos:
+
+- **Node.js** instalado
+- **npm** gerenciador de pacotes
+
+### Passos:
+
+1.  Clone o repositório:
+
+```bash
+git clone git@github.com:breno-aredes/focal-point.git
+```
+
+2.  Navegue até o diretório do projeto:
+
+```bash
+cd focal-point
+```
+
+3.  Instale as dependências:
+
+```bash
+npm install
+```
+
+4.  Execute o projeto:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5.  Abra o navegador e acesse:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estrutura do Projeto
 
-## Learn More
+O projeto está organizado da seguinte forma:
 
-To learn more about Next.js, take a look at the following resources:
+- `app/`: paginas do aplicativo
+- `components/`: Contém os componentes como `Header`, `Main`, `Modal`, `Button` e `CheckBox`.
+- `styles/`: Arquivos SCSS usados para estilização.
+- `types/`: Definições de tipos do TypeScript para os componentes.
+- `assets/`: imagens
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Considerações Finais:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Este projeto foi desenvolvido como parte de um teste técnico.
+- O foco principal é a implementação de funcionalidades básicas de uma To-Do List.
+- As instruções foram ajustadas para refletir a estrutura do projeto e os comandos mais comuns para rodar a aplicação.
+- Foram adicionadas mensagens personalizadas para os casos em que não houver tarefas ou quando todas as tarefas estiverem concluídas.
+- Foi implementada a persistência de dados com o uso de local storage, permitindo que as tarefas sejam mantidas entre sessões.
+- A funcionalidade de inserção do nome do usuário não foi implementada para manter o escopo alinhado com o que foi solicitado.
