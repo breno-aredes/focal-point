@@ -75,4 +75,4 @@ O projeto está organizado da seguinte forma:
 - As instruções foram ajustadas para refletir a estrutura do projeto e os comandos mais comuns para rodar a aplicação.
 - Foram adicionadas mensagens personalizadas para os casos em que não houver tarefas ou quando todas as tarefas estiverem concluídas.
 - Foi implementada a persistência de dados com o uso de local storage, permitindo que as tarefas sejam mantidas entre sessões.
-- A funcionalidade de inserção do nome do usuário não foi implementada para manter o escopo alinhado com o que foi solicitado.
+- A funcionalidade de inserção do nome do usuário não foi implementada para não extrapolar o escopo ou deixar o projeto desalinhado com o que foi solicitado.
