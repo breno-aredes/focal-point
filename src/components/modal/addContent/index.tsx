@@ -10,9 +10,7 @@ const AddContent = ({ setAddVisible, toDoList, setToDoList }: addModal) => {
     setTaskTitle(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    event.preventDefault();
+  const handleSubmit = () => {
     if (taskTitle === "") {
       return;
     }
@@ -29,14 +27,14 @@ const AddContent = ({ setAddVisible, toDoList, setToDoList }: addModal) => {
   return (
     <div className="modalContent">
       <h1>Nova tarefa</h1>
-      <form onSubmit={handleSubmit}>
+      <span>
         <label>Título</label>
         <input
           placeholder="Digite"
           value={taskTitle}
           onChange={handleInputChange}
         />
-      </form>
+      </span>
       <div className="modalButtonContent">
         <Button
           variant="cancel"
@@ -45,7 +43,7 @@ const AddContent = ({ setAddVisible, toDoList, setToDoList }: addModal) => {
         >
           Cancelar
         </Button>
-        <Button variant="save" type="submit">
+        <Button variant="save" type="button" onClick={() => handleSubmit()}>
           Adicionar
         </Button>
       </div>
