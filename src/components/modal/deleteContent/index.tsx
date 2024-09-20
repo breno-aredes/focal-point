@@ -13,10 +13,22 @@ const DeleteContent = ({
   setSelectedTask,
 }: deleteModal) => {
   const handleConfirmDelete = () => {
+    let updatedToDoList = toDoList;
+    let updatedCompletedTasks = completedTasks;
+
     if (toDoList.includes(selectedTask)) {
-      setToDoList(toDoList.filter((task) => task !== selectedTask));
+      updatedToDoList = toDoList.filter((task) => task !== selectedTask);
+      setToDoList(updatedToDoList);
+      localStorage.setItem("toDoList", JSON.stringify(updatedToDoList));
     } else if (completedTasks.includes(selectedTask)) {
-      setCompletedTasks(completedTasks.filter((task) => task !== selectedTask));
+      updatedCompletedTasks = completedTasks.filter(
+        (task) => task !== selectedTask
+      );
+      setCompletedTasks(updatedCompletedTasks);
+      localStorage.setItem(
+        "completedTasks",
+        JSON.stringify(updatedCompletedTasks)
+      );
     }
 
     setDeleteVisible(false);

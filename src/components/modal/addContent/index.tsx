@@ -16,7 +16,9 @@ const AddContent = ({ setAddVisible, toDoList, setToDoList }: addModal) => {
     }
 
     if (taskTitle.trim()) {
-      setToDoList([...toDoList, taskTitle.trim()]);
+      const updatedToDoList = [...toDoList, taskTitle.trim()];
+      setToDoList(updatedToDoList);
+      localStorage.setItem("toDoList", JSON.stringify(updatedToDoList));
       setAddVisible(false);
       setTaskTitle("");
     }
@@ -34,7 +36,11 @@ const AddContent = ({ setAddVisible, toDoList, setToDoList }: addModal) => {
         />
       </form>
       <div className="modalButtonContent">
-        <Button variant="cancel" onClick={() => setAddVisible(false)}>
+        <Button
+          variant="cancel"
+          type="button"
+          onClick={() => setAddVisible(false)}
+        >
           Cancelar
         </Button>
         <Button variant="save" onClick={() => handleSubmit()}>

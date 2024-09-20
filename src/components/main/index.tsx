@@ -19,16 +19,39 @@ export default function Main({
     setDeleteVisible(true);
   };
 
-  const handleCheckChange = (task: string, isChecked: boolean) => {
-    if (isChecked) {
-      setToDoList(toDoList.filter((t) => t !== task));
-      setCompletedTasks([...completedTasks, task]);
-    } else {
-      setCompletedTasks(completedTasks.filter((t) => t !== task));
-      setToDoList([...toDoList, task]);
-    }
+  const updateLocalStorage = (key: string, value: string[]) => {
+    localStorage.setItem(key, JSON.stringify(value));
   };
 
+  const handleCheckChange = (task: string, isChecked: boolean) => {
+    if (isChecked) {
+      setToDoList((prevToDoList) => {
+        const updatedToDoList = prevToDoList.filter((t) => t !== task);
+        updateLocalStorage("toDoList", updatedToDoList);
+        return updatedToDoList;
+      });
+
+      setCompletedTasks((prevCompletedTasks) => {
+        const updatedCompletedTasks = [...prevCompletedTasks, task];
+        updateLocalStorage("completedTasks", updatedCompletedTasks);
+        return updatedCompletedTasks;
+      });
+    } else {
+      setCompletedTasks((prevCompletedTasks) => {
+        const updatedCompletedTasks = prevCompletedTasks.filter(
+          (t) => t !== task
+        );
+        updateLocalStorage("completedTasks", updatedCompletedTasks);
+        return updatedCompletedTasks;
+      });
+
+      setToDoList((prevToDoList) => {
+        const updatedToDoList = [...prevToDoList, task];
+        updateLocalStorage("toDoList", updatedToDoList);
+        return updatedToDoList;
+      });
+    }
+  };
   return (
     <div className="main-container">
       <main>
